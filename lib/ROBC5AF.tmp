@@ -1,0 +1,13 @@
+#include "HolonomicDrive.h"
+
+
+
+// Initializes the Holonomic Drive controller MUST be called at robot initialization
+void initializeHolonimicDrive() {
+
+}
+
+
+//Sets the Motor Drive Type whether it is a four wheel based drive or three wheel
+void setMotorDriveType(int type){
+}

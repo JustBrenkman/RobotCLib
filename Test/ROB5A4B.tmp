@@ -1,0 +1,18 @@
+#pragma config(Sensor, S3,     sensorIR,       sensorI2CCustom)
+
+#include "irSeeker_lib.h"
+
+task main()
+{
+
+	IRSeekerInfo irSeeker;
+	initialieIRSeeker(irSeeker, sensorIR);
+
+	while(true) {
+		updateIRSeeker(irSeeker);
+		sendMessage(irSeeker.dir_ac + 100);
+		wait1Msec(100);
+		sendMessage(irSeeker.dcS1);
+		wait1Msec(50);
+	}
+}
